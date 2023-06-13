@@ -8,7 +8,6 @@ import com.unisinos.chainofresponsability.basic.interfaces.CartaoRepository;
 import com.unisinos.chainofresponsability.basic.interfaces.ContaClient;
 import com.unisinos.chainofresponsability.basic.models.CompraContext;
 import com.unisinos.chainofresponsability.basic.services.CompraService;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -59,7 +58,7 @@ public class CompraServiceTests {
     }
 
     @Test
-    public void validar_DadoNaoPossuoMensalDiario_QuandoValidoMinhaCompra_EntaoTenhoRetornoFalso() {
+    public void validar_DadoNaoPossuoLimiteMensal_QuandoValidoMinhaCompra_EntaoTenhoRetornoFalso() {
         when(cartaoRepository.getLimiteDiarioDisponivel(anyString())).thenReturn(BigDecimal.valueOf(8.00));
         when(cartaoRepository.getLimiteMensalDisponivel(anyString())).thenReturn(BigDecimal.valueOf(3.00));
 
