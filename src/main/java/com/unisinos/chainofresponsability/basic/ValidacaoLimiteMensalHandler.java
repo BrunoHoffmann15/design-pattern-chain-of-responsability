@@ -6,7 +6,7 @@ import com.unisinos.chainofresponsability.basic.models.CompraContext;
 import java.math.BigDecimal;
 
 public class ValidacaoLimiteMensalHandler extends ValidacaoCompraHandler {
-    private CartaoRepository cartaoRepository;
+    private final CartaoRepository cartaoRepository;
 
     public ValidacaoLimiteMensalHandler(CartaoRepository cartaoRepository) {
         this.cartaoRepository = cartaoRepository;

@@ -6,7 +6,7 @@ import com.unisinos.chainofresponsability.basic.models.CompraContext;
 import java.math.BigDecimal;
 
 public class ValidacaoSaldoHandler extends ValidacaoCompraHandler {
-    private ContaClient contaClient;
+    private final ContaClient contaClient;
 
     public ValidacaoSaldoHandler(ContaClient contaClient) {
         this.contaClient = contaClient;
